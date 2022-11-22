@@ -1,0 +1,11 @@
+name: save
+description: Platform independent save/download file
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies: {path: ^1.8.1, path_provider: ^2.0.11}
+
+dev_dependencies:
