@@ -20,3 +20,5 @@ Future<String?> save(FileType type, String filename, Uint8List data) async {
   anchorElement.click();
   return null;
 }
+
+Future<String?> getDownloadLocation(String filename) async => null;

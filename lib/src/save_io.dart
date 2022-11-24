@@ -7,9 +7,11 @@ import 'package:path_provider/path_provider.dart';
 import 'constants.dart';
 
 Future<String?> save(FileType type, String filename, Uint8List data) async {
-  String directory = (await getApplicationDocumentsDirectory()).path;
-  String path = p.join(directory, filename);
+  String path = (await getDownloadLocation(filename))!;
   File file = File(path);
   await file.writeAsBytes(data);
   return path;
 }
+
+Future<String?> getDownloadLocation(String filename) async =>
+    p.join((await getApplicationDocumentsDirectory()).path, filename);
